@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+기능 못한 것 : 
+각각의 todoitem을 수정하는 기능
+왜 ? : 이벤트를 걸 때, 원하는 요소만 선택되지 않고 map에서 1순환 하는 모든 요소들에
+모두 접근함... --> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+어떻게 해결할 것인가? : 
+1. 수정할 개별 todo item을 App에서 state로 만들기
+2. TodoList에 prop으로 보내기
+3. 수정이벤트 발생 시, 1) find함수 써서 1.에서 만든 state에 저장하기
+	 2)다른 페이지 띄워서 수정하기 ex 모달창.. --> react-router-dom 개념 필요 ㅠ
 
-## Available Scripts
+어려움 및 아직 부족한 것 : 
+1. map, filter같이 자주 안써본 함수는 return을 해줘야되는지 아닌지 매번 헷갈림. ()인지 {}인지도
+2. react-router-dom은 자주 다뤄본게 아니라 좀더 공부해야함
+3. css.... 제발..... 진짜....
+4. 리엑트 렌더링을 제대로 이해해야 todoitem수정에서 왜 애를 먹었는지 제대로 이해할 것 같음
+4번에 연장선으로 memo 리랜더링 시 변하는 부분만 랜더링해준다고 알고 있긴한데 제대로 써본적없다.
 
-In the project directory, you can run:
+깨달은 것 : 
+아이콘 같은거 바꿀 때 컴포넌트 단위로 바꾸는 것 같았다... 
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 
